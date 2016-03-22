@@ -1,0 +1,9 @@
+.idea
+node_modules
+.DS_Store
+*.bak
+*.tmp
+Thumbs.db
+/*.iml
+/tmp
+/*.xmind
