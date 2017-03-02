@@ -1,1 +1,11 @@
 node cpu监控工具，当cpu达到设置的阀值时会自动生成cpu快照日志到指定的目录，再结合chrom的开发者工具 profiler 进行日志分析
+
+var nodeAutoProfiler = require('node-auto-profiler');
+
+nodeAutoProfiler.monitoring({
+    root: 'path/of/log', //生成日志的目录
+    profileLogTime: 10000, //日志收集时间 收集10s的数据
+    cpuThreshold: 90 //收集日志的阀值 cpu>90%
+}, function(result) {
+    // 回调方法 do something
+})
